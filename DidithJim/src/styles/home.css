@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+:root{
+    --primary-color: #000;
+    --secondary-color: #4B4746;
+}
+
+@font-face {
+    font-family: tittle;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: hero;
+    src: url('../fonts/sunrollbold-wy6yg.otf');
+}
+
+@font-face {
+    font-family: text;
+    src: url('../fonts/MonaSans-Regular.ttf');
+}
+
+/* Header */
+
+.header{
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;  
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 2rem 0rem 2rem
+}
+
+.header__right-items{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header__logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.header__lang-btn{
+    font-family: tittle;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header__menu-btn{
+    cursor: pointer;
+}
+
+.home__page{
+    background-image: url('/img/background-image.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Hero */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    font-family: hero;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.hero__text {
+    margin: 0;
+}
+
+.hero__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.hero__list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.hero__item {
+    list-style: none;
+}
+
+.hero__link {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    font-family: text;
+}
