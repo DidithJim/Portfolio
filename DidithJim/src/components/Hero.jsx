@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/home.css';
 
 function Hero() {
@@ -15,10 +16,10 @@ function Hero() {
             <div className="hero__info">
                 <ul className="hero__list">
                     <li className="hero__item">
-                        <a href="/projects" title="projects" className="hero__link">projects</a>
+                        <Link to="/projects" className="hero__link">projects</Link>
                     </li>
                     <li className="hero__item">
-                        <a href="/about" title="about me" className="hero__link">about me</a>
+                        <Link to="/about" className="hero__link">about me</Link>
                     </li>
                 </ul>
             </div>

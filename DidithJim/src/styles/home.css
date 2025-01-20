@@ -4,9 +4,21 @@ body {
     box-sizing: border-box; 
 }
 
+
+
 :root{
     --primary-color: #000;
     --secondary-color: #4B4746;
+}
+
+@font-face {
+    font-family:tittle2 ;
+    src: url('../fonts/ClimateCrisis-Regular-VariableFont_YEAR.ttf');
+}
+
+@font-face {
+    font-family: number;
+    src: url('../fonts/Rock3D-Regular.ttf');
 }
 
 @font-face {
@@ -72,6 +84,56 @@ body {
     height: 100vh;
 }
 
+/* Menu */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .8s ease;
+}
+   
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 2rem 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu__list a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-family: tittle2;
+    letter-spacing: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem;
+    transition: letter-spacing 0.3s ease;
+}
+
+.menu__list a:hover {
+    letter-spacing: 0.8rem;  
+}
+
+
+.number {
+    font-family: tittle;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin: 0 2rem;
+}
+
 /* Hero */
 
 .hero {
@@ -80,6 +142,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: all .8s ease;
+}
+
+.hero.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
 
 .hero__container {
@@ -121,4 +191,21 @@ body {
     font-size: 1.3rem;
     color: var(--secondary-color);
     font-family: text;
+    z-index: 999;
+    position: relative;
+}
+
+.hero__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.hero__link:hover::after {
+    width: 100%;
 }
