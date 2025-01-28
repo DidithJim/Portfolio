@@ -3,27 +3,31 @@ import { Link } from 'react-router-dom';
 import UseAnimations from 'react-useanimations';
 import menu4 from 'react-useanimations/lib/menu4'
 
+
 function Header() {
     const [language, setLanguage] = useState('EN');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
     const toggleLanguage = () => {
         setLanguage(language === 'EN' ? 'ES' : 'EN');
     };
 
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
         const menu = document.querySelector('.menu');
         const hero = document.querySelector('.hero');
-        
+       
         if (isMenuOpen) {
             menu.classList.remove('active');
-            hero.classList.remove('hidden');
+            if (hero) hero.classList.remove('hidden');
         } else {
             menu.classList.add('active');
-            hero.classList.add('hidden');
+            if (hero) hero.classList.add('hidden');
         }
     };
+
 
     return (
         <header className='header'>
@@ -32,7 +36,7 @@ function Header() {
                     <Link to="/">
                         <img className='header__logo' src="/img/logo-portfolio.png" alt="DidithJim Logo" />
                     </Link>
-                    
+                   
                     <div className='header__right-items'>
                         <button className='header__lang-btn' onClick={toggleLanguage}>
                             {language}
@@ -50,6 +54,7 @@ function Header() {
                 </div>
             </nav>
 
+
             <div className="menu">
                 <ul className="menu__list">
                     <li><Link to="/"><span className='number'>01</span> HOME</Link></li>
@@ -61,5 +66,6 @@ function Header() {
         </header>
     )
 }
+
 
 export default Header

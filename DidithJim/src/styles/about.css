@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    --primary-color: #000;
+    --secondary-color: #4B4746;
+}
+
+@font-face {
+    font-family:tittle2 ;
+    src: url('../fonts/ClimateCrisis-Regular-VariableFont_YEAR.ttf');
+}
+
+@font-face {
+    font-family: text;
+    src: url('../fonts/MonaSans-Regular.ttf');
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: transparent;
+}
+
+.about__page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('/img/about-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.about__container {
+    position: relative;
+    width: calc(100% - 10rem);
+    padding: 80px 5rem 2rem;
+    z-index: 5;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.about__page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 9;
+}
+
+.about__title{
+    font-size: 3rem;
+    font-family: tittle2;
+    margin: 10rem 0 0 0;
+    position: relative;
+    width: 100%;
+}
+
+.about__title::after { 
+    content: '';
+    position: absolute;
+    bottom:-10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    animation: growLine 1.5s ease-out forwards;
+}
+
+.me{
+    font-family: text;
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+@keyframes growLine{
+    from{
+        width: 0;
+    }to{
+        width: 90%;
+    }
+}
+
+.about__description{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1rem 0 0 0;
+}
+
+.about__text{
+    font-family: text;
+    font-size: 1.3rem;
+    font-weight: 100;
+    width: 50%;
+    text-align: justify;
+}
+
+.skills {
+    margin-top: 4rem;
+}
+
+.skills__title {
+    font-family: tittle2;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.skills__title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    animation: growLine 1.5s ease-out forwards;
+}
+
+.skills__container {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.skills__category {
+    flex: 1;
+}
+
+.skills__subtitle {
+    font-family: text;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill__item {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50px;
+}
+
+.skill__name {
+    font-family: text;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .about__container {
+        width: calc(100% - 3rem);
+        padding: 80px 1rem 2rem;
+        margin: 7rem 0 0 0;
+    }
+
+    .about__title {
+        font-size: 2rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .about__description {
+        flex-direction: column;
+    }
+
+    .about__text {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+   
+
+    .skills {
+        margin-top: 2rem;
+    }
+
+    .skills__title {
+        font-size: 2rem;
+    }
+
+    .skills__container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skills__subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill__item {
+        padding: 0.5rem 1rem;
+    }
+
+    .skill__name {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .about__container {
+        width: calc(100% - 4rem);
+        padding: 100px 2rem 2rem;
+    }
+
+    .about__title {
+        font-size: 2.5rem;
+        margin: 2rem 0 0 0;
+    }
+
+    .about__text {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .skills {
+        margin-top: 3rem;
+    }
+
+    .skills__title {
+        font-size: 2.2rem;
+    }
+
+    .skills__container {
+        gap: 2rem;
+    }
+
+    .skills__subtitle {
+        font-size: 1.3rem;
+    }
+
+    .skill__item {
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Laptops/Desktops */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .about__container {
+        width: calc(100% - 6rem);
+        padding: 120px 3rem 2rem;
+    }
+
+    .about__title {
+        font-size: 2.8rem;
+    }
+
+    .about__text {
+        width: 60%;
+        font-size: 1.2rem;
+    }
+
+    .skills__container {
+        gap: 3rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1201px) {
+    .about__container {
+        width: calc(100% - 10rem);
+        padding: 120px 5rem 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Para pantallas ultra-anchas */
+@media (min-width: 1600px) {
+    .about__container {
+        max-width: 1600px;
+    }
+
+    .about__title {
+        font-size: 3.5rem;
+    }
+
+    .about__text {
+        font-size: 1.4rem;
+    }
+
+    .skills__title {
+        font-size: 3rem;
+    }
+
+    .skills__subtitle {
+        font-size: 1.8rem;
+    }
+
+    .skill__item {
+        padding: 1rem 2rem;
+    }
+
+    .skill__name {
+        font-size: 1.2rem;
+    }
+}
+
