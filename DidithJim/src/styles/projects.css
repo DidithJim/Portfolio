@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #000;
+    --secondary-color: #4B4746;
+}
+
+@font-face {
+    font-family: hero;
+    src: url('../fonts/sunrollbold-wy6yg.otf');
+}
+
+@font-face {
+    font-family:tittle2 ;
+    src: url('../fonts/ClimateCrisis-Regular-VariableFont_YEAR.ttf');
+}
+
+@font-face {
+    font-family: text;
+    src: url('../fonts/MonaSans-Regular.ttf');
+}
+
+.project__page{
+    background-image: url('/img/projects-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.project__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  
+    margin: 0 auto;
+    padding: 12rem 5rem 2rem;
+}
+
+.project__title{
+    font-family: hero;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
