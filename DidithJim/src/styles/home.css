@@ -67,7 +67,7 @@ body {
 
 
 .header__logo {
-    max-width: clamp(9rem, 15vw, 12rem);
+    max-width: clamp(7rem, 12vw, 10rem);  
     height: auto;
 }
 
