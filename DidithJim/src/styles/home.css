@@ -67,7 +67,7 @@ body {
 
 
 .header__logo {
-    max-width: clamp(150px, 15vw, 200px);
+    max-width: clamp(9rem, 15vw, 12rem);
     height: auto;
 }
 
@@ -293,8 +293,8 @@ body {
         margin: 0.5rem 0;
     }
 
-    .header__logo{
-        width: 150px;
+    .header__logo {
+        width: 9rem;
     }
 
     .hero__text{
