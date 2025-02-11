@@ -60,8 +60,8 @@ function Header() {
                                 loop={false}
                                 autoplay={false}
                                 style={{ 
-                                    width: 120,
-                                    height: 120,
+                                    width: 30,
+                                    height: 30,
                                     padding: 0,
                                     cursor: 'pointer',
                                 }}
