@@ -25,8 +25,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
-    background: transparent;
+    z-index: 100;
+    transition: all 0.3s ease;
 }
 
 .about__page {
@@ -79,6 +79,7 @@ body {
     height: 2px;
     background-color: var(--secondary-color);
     animation: growLine 1.5s ease-out forwards;
+    
 }
 
 .me{
@@ -90,7 +91,8 @@ body {
 @keyframes growLine{
     from{
         width: 0;
-    }to{
+    }
+    to{
         width: 90%;
     }
 }
@@ -110,8 +112,35 @@ body {
     text-align: justify;
 }
 
+.about__container,
+.contact__container {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.8s ease;
+}
+
+.about__container.hidden,
+.contact__container.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .skills {
-    margin-top: 4rem;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.skills::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    animation: growLine 1.5s ease-out forwards;
+    opacity: 0.8;
 }
 
 .skills__title {
@@ -130,6 +159,7 @@ body {
     height: 2px;
     background-color: var(--secondary-color);
     animation: growLine 1.5s ease-out forwards;
+
 }
 
 .skills__container {
@@ -137,6 +167,7 @@ body {
     gap: 4rem;
     margin-top: 2rem;
 }
+
 
 .skills__category {
     flex: 1;
@@ -169,59 +200,51 @@ body {
 
 /* Responsive Design */
 
-/* Móviles pequeños */
-@media (max-width: 480px) {
+/* Base styles */
+.about__container {
+    width: calc(100% - 10rem);
+    padding: 120px 5rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Blur effect on scroll */
+@media screen and (max-height: 100vh) {
+    .about__page {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .about__page:not(:hover) .header {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Laptops/Desktops medianos */
+@media screen and (max-width: 1200px) {
     .about__container {
-        width: calc(100% - 3rem);
-        padding: 80px 1rem 2rem;
-        margin: 7rem 0 0 0;
+        width: calc(100% - 6rem);
+        padding: 120px 3rem 2rem;
     }
 
     .about__title {
-        font-size: 2rem;
-        margin: 1rem 0 0 0;
-    }
-
-    .about__description {
-        flex-direction: column;
+        font-size: 2.8rem;
     }
 
     .about__text {
-        width: 100%;
-        font-size: 1rem;
-    }
-
-   
-
-    .skills {
-        margin-top: 2rem;
-    }
-
-    .skills__title {
-        font-size: 2rem;
+        width: 60%;
+        font-size: 1.2rem;
     }
 
     .skills__container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .skills__subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-
-    .skill__item {
-        padding: 0.5rem 1rem;
-    }
-
-    .skill__name {
-        font-size: 0.9rem;
+        gap: 3rem;
     }
 }
 
 /* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .about__container {
         width: calc(100% - 4rem);
         padding: 100px 2rem 2rem;
@@ -258,41 +281,71 @@ body {
     }
 }
 
-/* Laptops/Desktops */
-@media (min-width: 769px) and (max-width: 1200px) {
+/* Móviles */
+@media screen and (max-width: 480px) {
     .about__container {
-        width: calc(100% - 6rem);
-        padding: 120px 3rem 2rem;
+        width: calc(100% - 3rem);
+        padding: 80px 1rem 2rem;
+        margin: 7rem 0 0 0;
     }
 
     .about__title {
-        font-size: 2.8rem;
+        font-size: 2rem;
+        margin: 1rem 0 0 0;
+    }
+
+    .about__description {
+        flex-direction: column;
     }
 
     .about__text {
-        width: 60%;
-        font-size: 1.2rem;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .skills {
+        margin-top: 2rem;
+    }
+
+    .skills__title {
+        font-size: 2rem;
     }
 
     .skills__container {
-        gap: 3rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skills__subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .skill__item {
+        padding: 0.5rem 1rem;
+    }
+
+    .skill__name {
+        font-size: 0.9rem;
     }
 }
 
-/* Pantallas grandes */
-@media (min-width: 1201px) {
-    .about__container {
-        width: calc(100% - 10rem);
-        padding: 120px 5rem 2rem;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-}
-
-/* Para pantallas ultra-anchas */
-@media (min-width: 1600px) {
+/* Pantallas ultra-anchas */
+@media screen and (min-width: 1600px) and (min-height: 900px) {
     .about__container {
         max-width: 1600px;
+    }
+
+    .about__page::before {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: none;
+    }
+
+    .header {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: none !important;
     }
 
     .about__title {
@@ -319,4 +372,3 @@ body {
         font-size: 1.2rem;
     }
 }
-
