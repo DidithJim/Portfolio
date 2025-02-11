@@ -45,7 +45,7 @@ header {
 
 .project__title {
     font-family: hero;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--primary-color);
     margin-top: clamp(0.1rem, 0.5vh, 1rem);
     text-align: center;
@@ -64,7 +64,7 @@ header {
 .project__link {
     text-decoration: none;
     color: inherit;
-    width: 280px;
+    width: 220px;
     display: flex;
     flex-direction: column;
 }
@@ -79,20 +79,21 @@ header {
 
 .project__subtitle {
     font-family: text;
-    font-size: 1.2rem;
-    margin: 2rem 0 0.5rem 0;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    margin: 1rem 0 0.3rem 0;
 }
 
 .project__description {
     font-family: text;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
     color: var(--primary-color);
     font-style: italic;
 }
 
-.project__note{
+.project__note {
     font-family: text;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
 }
 
 .kursor, 
@@ -108,7 +109,7 @@ header {
     }
     
     .project__link {
-        width: 220px;
+        width: 180px;
     }
 }
 
@@ -124,7 +125,7 @@ header {
 
     .project__link {
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
     }
 }
 
