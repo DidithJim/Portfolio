@@ -9,6 +9,7 @@
   "author": "DidithJim",
   "license": "ISC",
   "dependencies": {
-    "lottie-react": "^2.4.1"
+    "lottie-react": "^2.4.1",
+    "react-useanimations": "^2.10.0"
   }
 }
