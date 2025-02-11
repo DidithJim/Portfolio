@@ -81,9 +81,18 @@ body {
 }
 
 
-.header__menu-btn{
+.header__menu-btn {
     cursor: pointer;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
+
+
 
 
 .home__page{
@@ -128,12 +137,13 @@ body {
 .menu__list a {
     text-decoration: none;
     color: var(--primary-color);
-    font-size: 3rem;
+    font-size: 2.8rem;
+    line-height: 1.6;
+    padding: 1rem 4rem;
     font-family: tittle2;
     letter-spacing: 0.5rem;
     display: flex;
     align-items: center;
-    padding: 1rem 5rem;
     transition: letter-spacing 0.3s ease;
 }
 
@@ -151,6 +161,8 @@ body {
     color: var(--secondary-color);
     margin: 0 2rem;
 }
+
+
 
 
 /* Hero */
@@ -242,120 +254,63 @@ body {
 
 /* Responsive Design */
 
-/* Móviles pequeños */
-@media (max-width: 480px) {
-    .header__container {
-        padding: 0rem 1rem;
-    }
-
-    .header__logo {
-        max-width: 150px;
-    }
-
-    .menu__list{
-        margin: 0 7rem 0 0;
-    }
-
+@media screen and (min-width: 1600px) and (min-height: 900px) {
     .menu__list a {
-        font-size: 1.8rem;
-        padding: 0.5rem 2rem;
-        letter-spacing: 0.3rem;
+        font-size: 3.5rem;
+        line-height: 1.8;
+        padding: 1rem 5rem;
     }
+}
 
-    .menu__list a:hover {
-        letter-spacing: 0.5rem;
-    }
-
-    .hero__container {
-        font-size: 1.7rem;
-        padding: 0 1rem;
-    }
-
-    .hero__list {
-        gap: 1rem;
-    }
-
-    .hero__link {
-        font-size: 1rem;
-    }
-
-    .header__menu-btn{
-        margin: 0 1rem 0 0
+/* Laptops/Desktops medianos */
+@media screen and (max-width: 1200px) {
+    .menu__list a {
+        font-size: 2.2rem;
+        padding: 0.8rem 3rem;
+        line-height: 1.5;
     }
 }
 
 /* Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-    .header__container {
-        padding: 0rem 1.5rem;
-    }
-
-    .header__logo {
-        max-width: 180px;
-    }
-
+@media screen and (max-width: 768px) {
     .menu__list a {
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 0.8rem 3rem;
     }
-
-    .hero__container {
-        font-size: 2.5rem;
-    }
-
-    .hero__list {
-        gap: 1.5rem;
-    }
-
-    .hero__link {
-        font-size: 1.1rem;
-    }
 }
 
-/* Laptops/Desktops */
-@media (min-width: 769px) and (max-width: 1200px) {
-    .header__container {
-        padding: 0rem 2rem;
+/* Móviles */
+@media screen and (max-width: 480px) {
+
+    .header{
+        position: absolute !important;
+        top: 0 !important;
     }
 
     .menu__list a {
-        font-size: 2.8rem;
-        padding: 1rem 4rem;
+        font-size: 1.8rem;
+        letter-spacing: 0.3rem;
+        padding: 0.1rem 0.2rem;
+        margin: 0.5rem 0;
     }
 
-    .hero__container {
-        font-size: 2.8rem;
+    .menu__list a:hover {
+        letter-spacing: 0.2rem;
     }
+    
+    .header__logo{
+        width: 150px;
+    }
+
+    .hero__text{
+        font-size: 1.5rem;
+    }
+
+    .hero__info{
+        margin-top: 1rem;
+    }
+
+     
 }
 
-/* Pantallas grandes */
-@media (min-width: 1201px) {
-    .header__container {
-        padding: 0rem 3rem;
-    }
 
-    .menu__list a {
-        font-size: 3rem;
-        padding: 1rem 5rem;
-    }
-
-    .hero__container {
-        font-size: 3rem;
-    }
-
-    .hero__link {
-        font-size: 1.3rem;
-    }
-}
-
-/* Para pantallas ultra-anchas */
-@media (min-width: 1600px) {
-    .header__container {
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-
-    .hero__container {
-        font-size: 3.5rem;
-    }
-}
