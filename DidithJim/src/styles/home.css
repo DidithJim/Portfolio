@@ -149,7 +149,7 @@ body {
 
 
 .menu__list a:hover {
-    letter-spacing: clamp(0.25rem, 0.6vw, 0.35rem);
+    letter-spacing: clamp(0.45rem, 0.8vw, 0.55rem);
 }
 
 
