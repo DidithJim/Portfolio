@@ -67,14 +67,14 @@ body {
 
 
 .header__logo {
-    max-width: 200px;
+    max-width: clamp(150px, 15vw, 200px);
     height: auto;
 }
 
 
 .header__lang-btn{
     font-family: tittle;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -137,11 +137,11 @@ body {
 .menu__list a {
     text-decoration: none;
     color: var(--primary-color);
-    font-size: 2.8rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     line-height: 1.6;
-    padding: 1rem 4rem;
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 4rem);
     font-family: tittle2;
-    letter-spacing: 0.5rem;
+    letter-spacing: clamp(0.2rem, 1vw, 0.5rem);
     display: flex;
     align-items: center;
     transition: letter-spacing 0.3s ease;
@@ -149,7 +149,7 @@ body {
 
 
 .menu__list a:hover {
-    letter-spacing: 0.8rem;  
+    letter-spacing: clamp(0.3rem, 1.2vw, 0.8rem);  
 }
 
 
@@ -192,7 +192,7 @@ body {
     align-items: center;    
     font-family: hero;
     font-weight: bolder;
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     text-align: center;
 }
 
@@ -227,7 +227,7 @@ body {
 .hero__link {
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
     color: var(--secondary-color);
     font-family: text;
     z-index: 999;
@@ -288,16 +288,10 @@ body {
     }
 
     .menu__list a {
-        font-size: 1.8rem;
-        letter-spacing: 0.3rem;
         padding: 0.1rem 0.2rem;
         margin: 0.5rem 0;
     }
 
-    .menu__list a:hover {
-        letter-spacing: 0.2rem;
-    }
-    
     .header__logo{
         width: 150px;
     }
