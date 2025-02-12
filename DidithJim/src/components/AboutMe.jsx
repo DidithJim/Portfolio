@@ -24,7 +24,7 @@ function AboutMe() {
         ES: {
             title: "Sobre",
             me: "mí",
-            description: "¡Hola! Soy Judith Ríos, una Desarrolladora Full Stack y Diseñadora UX/UI, tengo 23 años y me encanta crear soluciones digitales integrales. He completado mi Máster en CEI: Centro de Estudios e Innovación en 2025, combino experiencia técnica tanto en desarrollo front-end como back-end y tengo un ojo agudo para el diseño centrado en usuarios. Me especializo en crear aplicaciones eficientes, responsivas y visualmente atractivas que brindan experiencias de usuario excepcionales.",
+            description: "¡Hola! Soy Judith Ríos, una Desarrolladora Full Stack y Diseñadora UX/UI, tengo 23 años y me encanta crear soluciones digitales integrales. He completado mi Máster en CEI: Centro de Estudios e Innovación en 2025, combino experiencia técnica tanto en desarrollo front-end como back-end y me apasiona el diseño centrado en usuarios. Me especializo en crear aplicaciones eficientes, responsivas y visualmente atractivas que brindan experiencias de usuario excepcionales.",
             skills: "Skills",
             development: "Desarrollo",
             design: "Diseño",
