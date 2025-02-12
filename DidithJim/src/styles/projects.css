@@ -64,7 +64,7 @@ header {
 .project__link {
     text-decoration: none;
     color: inherit;
-    width: 180px;
+    width: 140px;
     display: flex;
     flex-direction: column;
 }
@@ -79,13 +79,13 @@ header {
 
 .project__subtitle {
     font-family: text;
-    font-size: clamp(0.7rem, 1.2vw, 1rem);
-    margin: 1rem 0 0.3rem 0;
+    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    margin: 0.5rem 0 0.2rem 0;
 }
 
 .project__description {
     font-family: text;
-    font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
     color: var(--primary-color);
     font-style: italic;
 }
@@ -109,7 +109,7 @@ header {
     }
     
     .project__link {
-        width: 150px;
+        width: 120px;
     }
 }
 
@@ -125,7 +125,7 @@ header {
 
     .project__link {
         width: 100%;
-        max-width: 250px;
+        max-width: 180px;
     }
 }
 
@@ -149,7 +149,7 @@ header {
     }
 
     .project__link {
-        max-width: 200px;
+        max-width: 160px;
     }
 }
 
