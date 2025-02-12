@@ -79,7 +79,7 @@ header {
 
 .project__subtitle {
     font-family: text;
-    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-size: clamp(0.7rem, 1.2vw, 1rem);
     margin: 1rem 0 0.3rem 0;
 }
 
