@@ -304,6 +304,7 @@ body {
     .menu__list a {
         padding: 0.1rem 0.2rem;
         margin: 0.5rem 0;
+        font-size: 1.5rem;
     }
 
     .header__logo {
@@ -311,7 +312,7 @@ body {
     }
 
     .hero__text{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .hero__info{
