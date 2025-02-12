@@ -72,12 +72,20 @@ body {
 }
 
 
-.header__lang-btn{
+.header__lang-btn {
     font-family: tittle;
     font-size: clamp(0.9rem, 1vw, 1rem);
     background-color: transparent;
-    border: none;
+    border: 1px solid var(--primary-color);  
+    border-radius: 4px;  
+    padding: 0.2rem 0.8rem;  
     cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.header__lang-btn:hover {
+    background-color: var(--primary-color);  
+    color: white;  
 }
 
 
