@@ -15,10 +15,11 @@ header {
 }
 
 .project__container {
-    padding: 8rem 5rem 2rem 5rem;
+    padding: 6rem 5rem 2rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     opacity: 1;
     visibility: visible;
     transition: all 0.8s ease;
@@ -56,15 +57,15 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 4rem;
+    gap: 5rem;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
 }
 
 .project__link {
     text-decoration: none;
     color: inherit;
-    width: 160px;
+    width: 150px;
     display: flex;
     flex-direction: column;
 }
@@ -81,6 +82,8 @@ header {
     font-family: text;
     font-size: clamp(0.8rem, 1.2vw, 0.9rem);
     margin: 0.5rem 0 0.2rem 0;
+    white-space: normal;
+    line-height: 1.2;
 }
 
 .project__description {
@@ -88,6 +91,8 @@ header {
     font-size: clamp(0.7rem, 1vw, 0.8rem);
     color: var(--primary-color);
     font-style: italic;
+    white-space: normal;
+    line-height: 1.2;
 }
 
 .project__note {
@@ -182,7 +187,8 @@ header {
 
 .projects__title {
     font-family: tittle2;
-    margin-top: clamp(0.1rem, 0.5vh, 1rem);
+    margin-top: 0;
     text-align: center;
     font-size: clamp(1.5rem, 3vw, 2.2rem);
+    margin-bottom: 2rem;
 }
