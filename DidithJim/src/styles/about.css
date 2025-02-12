@@ -33,7 +33,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url('/img/about-background.png');
+    background-image: url('/img/about-background-mobile.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
