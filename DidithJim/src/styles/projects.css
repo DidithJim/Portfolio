@@ -15,14 +15,11 @@ header {
 }
 
 .project__container {
-    padding: 6rem 5rem 2rem 5rem;
+    padding: 10rem 5rem 2rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.8s ease;
+    position: relative;
 }
 
 .project__container.hidden {
@@ -57,9 +54,10 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5rem;
+    gap: 4rem;
     width: 100%;
     max-width: 1200px;
+    margin-bottom: 2rem;
 }
 
 .project__link {
@@ -97,6 +95,17 @@ header {
 .project__note {
     font-family: text;
     font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    margin: 0.5rem 0 0 0;
+    position: relative;
+}
+
+.project__note::after {
+    content: none;
+}
+
+.project__container > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .kursor, 
@@ -117,8 +126,16 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+
+    body[data-page="projects"] {
+        background-image: url('/img/background-image-mobile.png');  
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .project__container {
-        padding: 8rem 2rem 2rem 2rem;
+        padding: 6rem 2rem 2rem 2rem;
     }
 
     .project__content {
@@ -131,6 +148,17 @@ header {
         width: 100%;
         max-width: 200px;
     }
+
+    .project__note {
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .projects__title {
+        margin-top: clamp(7rem, 14vh, 9rem);
+    }
+
+    
 }
 
 /* Móviles grandes */
@@ -185,8 +213,27 @@ header {
 
 .projects__title {
     font-family: tittle2;
-    margin-top: 0;
+    margin-top: clamp(4rem, 8vh, 6rem);
     text-align: center;
     font-size: clamp(1.5rem, 3vw, 2.2rem);
-    margin-bottom: 2rem;
+    margin-bottom: clamp(3rem, 5vh, 4rem);
+}
+
+@media screen and (max-width: 480px) {
+    .project__note {
+        margin-top: 0.6rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .projects__title {
+        margin-top: clamp(8rem, 16vh, 10rem);
+    }
+
+    .project__container {
+        padding: 9.5rem 1rem 2rem 1rem;
+    }
+
+    .project__title{
+        margin: 0rem 0 1rem 0;
+    }
 }
