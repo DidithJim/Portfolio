@@ -82,8 +82,7 @@ header {
     font-family: text;
     font-size: clamp(0.8rem, 1.2vw, 0.9rem);
     margin: 0.5rem 0 0.2rem 0;
-    white-space: normal;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .project__description {
