@@ -7,7 +7,15 @@ import Projects from './pages/Projects'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import { MenuProvider } from './components/MenuContext'
+import 'kursor/dist/kursor.css'
+import Kursor from 'kursor/dist/kursor'  
 import './styles/home.css'
+
+new Kursor({
+    type: 1,  
+    removeDefaultCursor: true,
+    color: '#000000'  
+})
 
   ReactDOM.createRoot(document.getElementById('root')).render( 
     <React.StrictMode>
