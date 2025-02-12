@@ -301,6 +301,10 @@ body {
         top: 0 !important;
     }
 
+    .header__container {
+        padding: 0rem 0.5rem;  
+    }
+
     .menu__list a {
         padding: 0.1rem 0.2rem;
         margin: 0.5rem 0;
