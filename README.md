@@ -1,4 +1,6 @@
 # Portfolio DidithJim
+![Portada del Proyecto](/img/portada-portfolio.png)
+
 
 Un portfolio moderno y minimalista que muestra mi trabajo como Desarrolladora Full Stack. Construido con React y diseñado con un enfoque en la experiencia del usuario y una estética limpia.
 
