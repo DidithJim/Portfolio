@@ -1,4 +1,4 @@
-# Portfolio DidithJim
+# Portfolio DidithJim ( React.js / Vite )
 <img src="https://didithjim.vercel.app/img/portada-portfolio.png" width="100%" alt="Portfolio Preview">
 Un portfolio moderno y minimalista que muestra mi trabajo como Desarrolladora Full Stack. Construido con React y diseñado con un enfoque en la experiencia del usuario y una estética limpia.
 
