@@ -16,7 +16,6 @@ Un portfolio moderno y minimalista que muestra mi trabajo como Desarrolladora Fu
 
 - React
 - Vite
-- React Router
 - CSS3
 - Kursor.js
 - Lottie Animations
