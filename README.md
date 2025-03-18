@@ -15,6 +15,7 @@ Un portfolio moderno y minimalista que muestra mi trabajo como Desarrolladora Fu
 ## 🛠️ Construido Con
 
 - React
+- Javascript
 - Vite
 - CSS3
 - Kursor.js
